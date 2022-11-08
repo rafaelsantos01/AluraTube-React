@@ -11,7 +11,7 @@ function HomePage() {
     const styleHomePage = { 
         // backgroundColor: "red" 
     };
-    const [valorDoFiltro, setValorDoFiltro] = React.useState("Teste");
+    const [valorDoFiltro, setValorDoFiltro] = React.useState("");
     return (
         <>
             <CSSReset />
