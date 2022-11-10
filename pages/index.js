@@ -1,6 +1,5 @@
 import config from "../config.json";
 import styled from "styled-components";
-import { CSSReset } from "../src/components/CSSReset";
 import Menu from "../src/components/menu";
 import { StyledTimeline } from "../src/components/Timeline.js";
 import { StyledFavorites } from "../src/components/Favorites";
@@ -8,20 +7,14 @@ import React from "react";
 
 
 function HomePage() {
-    const styleHomePage = { 
-        // backgroundColor: "red" 
-    };
     const [valorDoFiltro, setValorDoFiltro] = React.useState("");
     return (
-        <>
-            <CSSReset />
+        <>    
             <div style={{
                 display: "flex",
                 flexDirection: "column",
                 flex: 1,
-                // backgroundColor: "red",
             }}>
-                //Prop drean
                 <Menu valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro}/>
                 <Header />
                 <Timeline searchValue={valorDoFiltro} playlists={config.playlists}>
@@ -36,6 +29,7 @@ function HomePage() {
 export default HomePage
 
 const StyledHeader = styled.div`
+    background-color: ${({ theme }) => theme.backgroundLevel1};
         .perfil {
             width: 80px;
             height: 80px;
@@ -54,7 +48,7 @@ const StyledHeader = styled.div`
             height: 230px;
             width: 100%;
         }
-  `;
+`;
 
 function Header() {
     return (
@@ -114,7 +108,7 @@ function Timeline({searchValue, ...props}) {
 
 function Favorites(props){
     const favoritesList = Object.keys(props.favorites);
-    console.log("Dentro do componente", props.favorites);
+    //console.log("Dentro do componente", props.favorites);
     return (
         <StyledFavorites>
             {favoritesList.map((favorite) => {
