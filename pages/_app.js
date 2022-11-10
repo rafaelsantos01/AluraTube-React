@@ -1,7 +1,7 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
 import { CSSReset } from "../src/components/CSSReset"
-import ColorModeProvider, { ColorModeContext } from "../src/components/Menu/components/ColorMode"
+import ColorModeProvider, { ColorModeContext } from "../src/components/menu/components/ColorMode"
 
 const theme = {
 	light: {
@@ -39,6 +39,7 @@ function MyApp({ Component, pageProps }) {
 		</ ThemeProvider>
 	)
 }
+
 
 export default function _App(props) {
 	return (
