@@ -7,10 +7,11 @@ export const CSSReset = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+	*::-webkit-scrollbar {
+		display: none;
+	}
   body {
     font-family: sans-serif;
-    background-color: ${({ theme }) => theme.backgroundBase};
-    color: ${({ theme }) => theme.textColorBase};
   }
   /* NextJS */
   html {
@@ -19,6 +20,8 @@ export const CSSReset = createGlobalStyle`
     min-height: 100%;
   }
   body {
+		background-color: ${({ theme }) => theme.backgroundBase};
+		color: ${({ theme }) => theme.textColorBase};
     display: flex;
     flex: 1;
   }

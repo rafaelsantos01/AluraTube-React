@@ -1,9 +1,11 @@
-import config from "../config.json";
-import styled from "styled-components";
-import Menu from "../src/components/menu";
-import { StyledTimeline } from "../src/components/Timeline.js";
+import React from "react"
+import config from "../config.json"
+import styled from "styled-components"
+import { CSSReset } from "../src/components/CSSReset";
+import Menu from "../src/components/Menu"
+import { StyledTimeline } from "../src/components/Timeline";
 import { StyledFavorites } from "../src/components/Favorites";
-import React from "react";
+
 
 
 function HomePage() {
@@ -48,7 +50,7 @@ const StyledHeader = styled.div`
             height: 230px;
             width: 100%;
         }
-`;
+`
 
 function Header() {
     return (
